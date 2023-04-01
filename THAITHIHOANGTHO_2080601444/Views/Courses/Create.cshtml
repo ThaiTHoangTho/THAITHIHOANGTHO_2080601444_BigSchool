@@ -1,6 +1,7 @@
 ﻿@model THAITHIHOANGTHO_2080601444.ViewModels.CourseViewModel
 @{
     ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 
@@ -30,6 +31,8 @@
         @Html.ValidationMessageFor(m => m.Category)
     </div>
     <button type="submit" value="Save" class="btn btn-primary">Save</button>
+    <div class="form-group"> </div>
+    <div class="form-group"></div>
 }
 @section scripts
 {

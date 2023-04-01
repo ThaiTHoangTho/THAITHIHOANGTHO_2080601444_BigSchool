@@ -10,14 +10,14 @@ namespace THAITHIHOANGTHO_2080601444.Controllers
 {
     public class HomeController : Controller
     {
-        private ApplicationDbContext _context;
+        private ApplicationDbContext _dbcontext;
         public HomeController()
         {
-            _context = new ApplicationDbContext();
+            _dbcontext = new ApplicationDbContext();
         }
         public ActionResult Index()
         {
-            var upcommingCourses = _context.Courses
+            var upcommingCourses = _dbcontext.Courses
                 .Include(c => c.Lecturer)
                 .Include(c => c.Category)
                 .Where(c => c.DateTime > DateTime.Now);
